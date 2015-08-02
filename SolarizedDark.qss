@@ -2,7 +2,7 @@
  Quassel Solarized Theme by Antoligy
 */
 Palette {	
-	marker-line: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #073642, stop: 0.1 transparent); 
+	marker-line: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #657B83, stop: 0.1 transparent); 
 }
 
 ChatView {
@@ -10,7 +10,7 @@ ChatView {
 }
 
 ChatLine[label="highlight"] {
-	foreground: #586E75; 
+	foreground: #DC322f;
 	background: #073642;
 }
 
@@ -21,23 +21,30 @@ ChatLine::timestamp {
 	font-style: normal;
 }
 
+ChatLine::timestamp[label="highlight"] { 
+	foreground: #93A1A1; 
+	background: #073642;
+	font-weight: normal; 
+	font-style: normal;
+}
+
 ChatLine#plain { foreground: #93A1A1; }
 ChatLine#notice { foreground: #93A1A1; background: #073642; }
 ChatLine#action { foreground: #93A1A1; font-weight: bold; font-style: italic; }
-ChatLine#nick { foreground: #657B83; }
-ChatLine#mode { foreground: #657B83; font-weight: bold; }
-ChatLine#join { foreground: #657B83; }
-ChatLine#part { foreground: #657B83; }
-ChatLine#quit { foreground: #657B83; }
-ChatLine#kick { foreground: #657B83; }
-ChatLine#kill { foreground: #657B83; }
-ChatLine#netsplit { foreground: #657B83; }
+ChatLine#nick { foreground: #586e75; }
+ChatLine#mode { foreground: #586e75; font-weight: bold; }
+ChatLine#join { foreground: #586e75; }
+ChatLine#part { foreground: #586e75; }
+ChatLine#quit { foreground: #586e75; }
+ChatLine#kick { foreground: #586e75; }
+ChatLine#kill { foreground: #586e75; }
+ChatLine#netsplit { foreground: #586e75; }
 ChatLine#server { foreground: #586E75; }
-ChatLine#info { foreground: #657B83; }
-ChatLine#error { foreground: #657B83; }
+ChatLine#info { foreground: #586e75; }
+ChatLine#error { foreground: #586e75; }
 ChatLine#daychange { foreground: #586E75; }
 ChatLine#topic { foreground: #657B83; }
-ChatLine::sender#plain[sender="self"] { foreground: #839496; }
+ChatLine::sender#plain[sender="self"] { foreground: #941100; }
 ChatLine::sender#plain[sender="00"] { foreground: #B58900; }
 ChatLine::sender#plain[sender="01"] { foreground: #CB4B16; }
 ChatLine::sender#plain[sender="02"] { foreground: #DC322f; }
@@ -46,30 +53,52 @@ ChatLine::sender#plain[sender="04"] { foreground: #6C71C4; }
 ChatLine::sender#plain[sender="05"] { foreground: #268BD2; }
 ChatLine::sender#plain[sender="06"] { foreground: #2AA198; }
 ChatLine::sender#plain[sender="07"] { foreground: #859900; }
-ChatLine::sender#plain[sender="08"] { foreground: #B58900; }
-ChatLine::sender#plain[sender="09"] { foreground: #CB4B16; }
-ChatLine::sender#plain[sender="0a"] { foreground: #DC322f; }
-ChatLine::sender#plain[sender="0b"] { foreground: #D33682; }
-ChatLine::sender#plain[sender="0c"] { foreground: #6C71C4; }
-ChatLine::sender#plain[sender="0d"] { foreground: #268BD2; }
-ChatLine::sender#plain[sender="0e"] { foreground: #2AA198; }
-ChatLine::sender#plain[sender="0f"] { foreground: #859900; }
+ChatLine::sender#plain[sender="08"] { foreground: #FFFC79; }
+ChatLine::sender#plain[sender="09"] { foreground: #FFD479; }
+ChatLine::sender#plain[sender="0a"] { foreground: #FF7E79; }
+ChatLine::sender#plain[sender="0b"] { foreground: #FF8AD8; }
+ChatLine::sender#plain[sender="0c"] { foreground: #D783FF; }
+ChatLine::sender#plain[sender="0d"] { foreground: #76D6FF; }
+ChatLine::sender#plain[sender="0e"] { foreground: #73FCD6; }
+ChatLine::sender#plain[sender="0f"] { foreground: #73FA79; }
 
-ChatListItem { foreground: #657B83; }
+ChatListItem { foreground: #839496; }
 ChatListItem[state="inactive"] { foreground: #586E75; }
-ChatListItem[state="channel-event"] { foreground: #268BD2; }
-ChatListItem[state="unread-message"] { foreground: #DC322f; }
-ChatListItem[state="highlighted"] { foreground: #859900; }
+ChatListItem[state="channel-event"] { foreground: #6c71c4; }
+ChatListItem[state="unread-message"] { foreground: #268BD2; }
+ChatListItem[state="highlighted"] { foreground: #dc322f; }
 BufferView { background: #002B36; }
 
 NickListItem[type="category"] { foreground: #586E75; }
-NickListItem[type="user"] { foreground: #657B83; }
+NickListItem[type="user"] { foreground: #839496; }
 NickListItem[type="user", state="away"] { foreground: #586E75; }
 NickView { background: #002B36; }
 
 MultiLineEdit { background: #002B36; color: #839496; }
 StyledLabel#topicLabel { background: #002B36; }
 
+QTreeView {
+  selection-background-color: transparent;
+}
+
+QTreeView::item:selected {
+  color: #839496;
+}
+
+TreeView::item:hover {
+  background: #073642;
+}
+
+
+QTreeView::item:selected:active{
+  color: #839496;
+  background: #073642;
+}
+
+QTreeView::item:selected:!active {
+  color: #839496;
+  background: #073642;
+}
 QTreeView::item:selected { color: #839496; }
 ChatMonitorSettingsPage BufferView::item { color: #839496; }
 QTreeView#settingsTree { background: #002B36; }
@@ -86,7 +115,7 @@ QTableView {
 }
 
 Palette {
-  link: #586E75; link-visited: #586E75;
+  link: #268bd2; link-visited: #268bd2;
 
   window: #002B36; window-text: #839496; text: #839496;
 
